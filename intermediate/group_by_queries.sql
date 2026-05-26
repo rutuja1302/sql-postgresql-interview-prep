@@ -23,3 +23,7 @@ GROUP BY department_id, salary
       ON a.department_id=b.department_id AND a.salary=b.salary
       ORDER BY a.department_id;
 
+
+-- Difference between highest and lowest salary in each department
+SELECT department_id, (MAX(salary)-MIN(SALARY)) AS salary_difference FROM EMPLOYEES e 
+GROUP BY department_id;
